@@ -1,156 +1,139 @@
 package ua.lviv.iot;
 
 public class Printer {
-	
-	private int PriceInDollars;
-	private String NameOfPrinter;
-	private int SymbolsPerSecond;
-	private int Weight;
-	private int Height;
-	private int Width;
-	private int Length;
-	public static int NumberOfPrintersInStock;
-	protected String ProductionCountry;
-	protected String InkPrinterUses;
-	
-	
-	public Printer(int PriceInDollars, String NameOfPrinter, int SymbolsPerSecond, int Weigth, int Height,
-			int Width, int Length, String ProductionCountry, String InkPrinterUses)
-	{
-		this.PriceInDollars = PriceInDollars;
-		this.NameOfPrinter = NameOfPrinter;
-		this.SymbolsPerSecond = SymbolsPerSecond;
-		this.Weight = Weight;
-		this.Height = Height;
-		this.Width = Width;
-		this.Length = Length;
-		this.ProductionCountry = ProductionCountry;
-		this.InkPrinterUses = InkPrinterUses;
+
+	private int priceInDollars;
+	private String nameOfPrinter;
+	private int symbolsPerSecond;
+	private int weight;
+	private int height;
+	private int width;
+	private int length;
+	public static int numberOfPrintersInStock;
+	protected String productionCountry;
+	protected String inkPrinterUses;
+
+	public Printer(int priceInDollars, String nameOfPrinter, int symbolsPerSecond, int weigth, int height, int width,
+			int length, String productionCountry, String inkPrinterUses) {
+		this.priceInDollars = priceInDollars;
+		this.nameOfPrinter = nameOfPrinter;
+		this.symbolsPerSecond = symbolsPerSecond;
+		this.weight = weigth;
+		this.height = height;
+		this.width = width;
+		this.length = length;
+		this.productionCountry = productionCountry;
+		this.inkPrinterUses = inkPrinterUses;
 	}
-	public Printer(int PriceInDollars, String NameOfPrinter, int SymbolsPerSecond, int Weight ) 
-	{
-		this(PriceInDollars, NameOfPrinter, SymbolsPerSecond, Weight,0,0,0,"Unknown","Unknown");
+
+	public Printer(int priceInDollars, String nameOfPrinter, int symbolsPerSecond, int weight) {
+		this(priceInDollars, nameOfPrinter, symbolsPerSecond, weight, 0, 0, 0, "Unknown", "Unknown");
 	}
+
 	public Printer() {
-		this(0,"Unknown",0,0,0,0,0,"Unknown","Unknown");
+		this(0, "Unknown", 0, 0, 0, 0, 0, "Unknown", "Unknown");
 	}
-	
+
 	public int getPriceInDollars() {
-		return PriceInDollars;
+		return priceInDollars;
 	}
+
 	public void setPriceInDollars(int PriceInDollars) {
-		this.PriceInDollars = PriceInDollars;
+		this.priceInDollars = PriceInDollars;
 	}
-	
-	
+
 	public int getSymbolsPerSecond() {
-		return SymbolsPerSecond;
+		return symbolsPerSecond;
 	}
+
 	public void setSymbolsPerSecond(int SymbolsPerSecond) {
-		this.SymbolsPerSecond = SymbolsPerSecond;
+		this.symbolsPerSecond = SymbolsPerSecond;
 	}
-	
-	
+
 	public int getWeight() {
-		return Weight;
+		return weight;
 	}
+
 	public void setWeight(int Weight) {
-		this.Weight = Weight;
+		this.weight = Weight;
 	}
-	
-	
+
 	public int getHeight() {
-		return Height;
+		return height;
 	}
+
 	public void setHeight(int Height) {
-		this.Height = Height;
+		this.height = Height;
 	}
-	
-	
-	public int getLength()
-	{
-		return Length;
+
+	public int getLength() {
+		return length;
 	}
-	public void setLenght(int Length)
-	{
-	this.Length = Length;
+
+	public void setLenght(int Length) {
+		this.length = Length;
 	}
-	
-	
-	public int getWidth() 
-	{
-	return Width;
+
+	public int getWidth() {
+		return width;
 	}
-	public void setWidth(int Width)
-	{
-	this.Width = Width;
+
+	public void setWidth(int Width) {
+		this.width = Width;
 	}
-	
-	
+
 	public String getNameOfPrinter() {
-		return NameOfPrinter;
+		return nameOfPrinter;
 	}
-	public void setNameOfPrinter(String NameOfPrinter)
-	{
-		this.NameOfPrinter = NameOfPrinter;
+
+	public void setNameOfPrinter(String NameOfPrinter) {
+		this.nameOfPrinter = NameOfPrinter;
 	}
-	
-	
-	public String getProductionCountry() 
-	{
-		return ProductionCountry;
+
+	public String getProductionCountry() {
+		return productionCountry;
 	}
-	public void setProductionCountry(String ProductionCounty)
-	{
-		this.ProductionCountry = ProductionCountry;
+
+	public void setProductionCountry(String ProductionCounty) {
+		this.productionCountry = productionCountry;
 	}
-	
-	
-	public String getInkPrinterUses()
-	{
-		return InkPrinterUses;
+
+	public String getInkPrinterUses() {
+		return inkPrinterUses;
 	}
-	public void setInkPrinterUses(String InkPrinterUses)
-	{
-		this.InkPrinterUses = InkPrinterUses;
+
+	public void setInkPrinterUses(String InkPrinterUses) {
+		this.inkPrinterUses = InkPrinterUses;
 	}
-	
+
 	@Override
-	
-	
-	public String toString()
-	{
-		return "Printer\nNameOfPrinter" + NameOfPrinter + "; ProductionCountry " + ProductionCountry +
-		"; InkPrinterUses " + InkPrinterUses + "; Weight " + Weight + "; PriceInDollars " + PriceInDollars +
-		"; Height" + Height + "; Width" + Width + "; Length " + Length + "; SymbolsPerSecond " + SymbolsPerSecond;
-				
+
+	public String toString() {
+		return "Printer\nNameOfPrinter " + nameOfPrinter + "; ProductionCountry " + productionCountry
+				+ "; InkPrinterUses " + inkPrinterUses + "; Weight " + weight + "; PriceInDollars " + priceInDollars
+				+ "; Height" + height + "; Width" + width + "; Length " + length + "; SymbolsPerSecond "
+				+ symbolsPerSecond;
+
 	}
-	
-	
-	public String getNumberOfPrintersInStock()
-	{
-		return "NumberOfPrintersInStock " + Printer.NumberOfPrintersInStock;
+
+	public String getNumberOfPrintersInStock() {
+		return "NumberOfPrintersInStock " + Printer.numberOfPrintersInStock;
 	}
-	public String getStaticNumberOfPrintersInStock()
-	{
-		return "NumberOfPrintersInStock(Static) " + Printer.NumberOfPrintersInStock;
+
+	public static String getStaticNumberOfPrintersInStock() {
+		return "NumberOfPrintersInStock(Static) " + Printer.numberOfPrintersInStock;
 	}
-	
-	
-	public void ResetValues(int PriceInDollars, String NameOfPrinter, int SymbolsPerSecond, int Weight, int Height, int Width,
-			int Length, String ProductionCountry, String InkPrinterUses)
-	{
-		this.PriceInDollars = PriceInDollars;
-		this.NameOfPrinter = NameOfPrinter;
-		this.SymbolsPerSecond = SymbolsPerSecond;
-		this.Weight = Weight;
-		this.Height = Height;
-		this.Width = Width;
-		this.Length = Length;
-		this.ProductionCountry = ProductionCountry;
-		this.InkPrinterUses = InkPrinterUses;
+
+	public void resetValues(int priceInDollars, String nameOfPrinter, int symbolsPerSecond, int weight, int height,
+			int width, int length, String productionCountry, String inkPrinterUses) {
+		this.priceInDollars = priceInDollars;
+		this.nameOfPrinter = nameOfPrinter;
+		this.symbolsPerSecond = symbolsPerSecond;
+		this.weight = weight;
+		this.height = height;
+		this.width = width;
+		this.length = length;
+		this.productionCountry = productionCountry;
+		this.inkPrinterUses = inkPrinterUses;
 	}
 }
-
-
-
