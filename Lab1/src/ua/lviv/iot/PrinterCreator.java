@@ -4,29 +4,31 @@ public class PrinterCreator {
 	
 	public static void main(String[] args) {
 		
-		final int ArraySize = 4;
+		final int arraySize = 4;
 		
-		Printer FirstPrinter = new Printer(300, "CP-RT-1001", 90, 12,30,85,50,"Japan", "Standart printer ink" );
+		Printer firstPrinter = new Printer(300, "CP-RT-1001", 90, 12,30,85,50,"Japan", "Standart printer ink" );
 		
-		System.out.println(FirstPrinter.toString());
+		System.out.println(firstPrinter.toString());
 		
-		Printer SecondPrinter = new Printer(250, "HYR-2", 120, 15,35,90,50, "Germany", "High-quality colorful printer ink");
+		Printer secondPrinter = new Printer(250, "HYR-2", 120, 15,35,90,50, "Germany", "High-quality colorful printer ink");
 		
-		System.out.println(SecondPrinter.toString());
+		System.out.println(secondPrinter.toString());
 		
-		Printer ThirdPrinter = new Printer();
+		Printer thirdPrinter = new Printer();
 		
-		System.out.println(ThirdPrinter.toString());
+		System.out.println(thirdPrinter.toString());
 		
-		int ObjectNumber = 0;
-		Printer PrinterArray[] = new Printer[ArraySize];
+		int objectNumber = 0;
+		Printer PrinterArray[] = new Printer[arraySize];
 		
 		
-		while(ObjectNumber < ArraySize)
+		
+		do
 		{
-			PrinterArray[ObjectNumber] = new Printer();
-			ObjectNumber++;
-		}
+			PrinterArray[objectNumber] = new Printer();
+			objectNumber++;
+		}while(objectNumber < arraySize);
+			
 		for(Printer currentObjectNumber: PrinterArray)
 		{
 			System.out.println(currentObjectNumber.toString() + "\n");
